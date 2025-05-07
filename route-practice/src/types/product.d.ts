@@ -6,7 +6,7 @@ export interface Product {
   price: number;
 }
 
-export interface ProductDetail extends Product {
+export interface ProductItem extends Product {
   availabilityStatus: string;
   reviews: [
     {

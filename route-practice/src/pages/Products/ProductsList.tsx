@@ -8,6 +8,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 
 const ProductsList = () => {
   const [products, setProducts] = useState<Product[]>([]);
@@ -24,7 +25,7 @@ const ProductsList = () => {
       <h1 className="text-5xl">ProductsList</h1>
       <ul>
         {products.map((p) => (
-          <li key={p.id}>
+          <li key={p.id} className="my-2">
             <Link to={`/products/${p.id}`}>
               <Card>
                 <CardHeader>
@@ -32,8 +33,8 @@ const ProductsList = () => {
                 </CardHeader>
                 <CardContent>
                   <CardDescription>{p.description}</CardDescription>
-                  <div className="flex justify-between">
-                    <span>{p.category}</span>
+                  <div className="flex justify-between mt-3">
+                    <Badge>{p.category}</Badge>
                     <span>{p.price}</span>
                   </div>
                 </CardContent>

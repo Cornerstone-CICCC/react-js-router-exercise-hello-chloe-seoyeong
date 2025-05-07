@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <header className="flex justify-between py-4">
+    <header className="flex justify-between mb-8 py-4">
       <div>LOGO</div>
       <nav>
         <menu className="flex items-center gap-2">
